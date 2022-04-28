@@ -42,14 +42,13 @@ The sample databases in the project are customized. Some tables' and columns' na
 #### MySql
 
 ```bash
-# restore into localhost
 mysql -u user_id -p northwind < northwind.sql
 ```
 
+#### MySql + Docker
+
 ```bash
-# run with docker
-cd ./mysql
-sh ./run.sh
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/sealbro/northwind/master/mysql/run.sh)"
 ```
 
 #### PostgresQL
