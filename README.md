@@ -37,16 +37,20 @@ The sample databases in the project are customized. Some tables' and columns' na
 
 ![northwindcore_er_diagram](mysql/northwindcore_er_diagram.png)
 
-
-
 ### Restore the database from SQL script
 
 #### MySql
 
 ```bash
+# restore into localhost
 mysql -u user_id -p northwind < northwind.sql
 ```
 
+```bash
+# run with docker
+cd ./mysql
+sh ./run.sh
+```
 
 #### PostgresQL
 
@@ -114,13 +118,3 @@ sqlite3 northwind.db
 * Folder json contains a few json flat files
 * json_data.min.json is the original data set
 * json_tiny.json is version with only a small data set
-
-
-### TODO
-
-* ~~Add script for MongoDB~~
-* ~~Add script for Sqlite~~
-
-
-
-
