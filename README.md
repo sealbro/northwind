@@ -48,14 +48,17 @@ mysql -u user_id -p northwind < northwind.sql
 #### MySql + Docker
 
 ```bash
-cd ./mysql && sh ./run.sh ./northwind.sql
+cd ./mysql && sh ./run.sh "$(cat ./northwind.sql)"
 ```
 
 or
 
 ```bash
+echo "$(curl -fsSL https://raw.githubusercontent.com/sealbro/northwind/master/mysql/northwind.sql)" |
 bash -c "$(curl -fsSL https://raw.githubusercontent.com/sealbro/northwind/master/mysql/run.sh)"
 ```
+
+"$(curl -fsSL https://raw.githubusercontent.com/sealbro/northwind/master/mysql/northwind.sql)"
 
 #### PostgresQL
 
