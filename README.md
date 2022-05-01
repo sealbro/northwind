@@ -54,11 +54,9 @@ cd ./mysql && sh ./run.sh "$(cat ./northwind.sql)"
 or
 
 ```bash
-echo "$(curl -fsSL https://raw.githubusercontent.com/sealbro/northwind/master/mysql/northwind.sql)" |
-bash -c "$(curl -fsSL https://raw.githubusercontent.com/sealbro/northwind/master/mysql/run.sh)"
+MYSQL_URL=https://raw.githubusercontent.com/sealbro/northwind/master/mysql \
+&& bash -c "$(curl -fsSL $MYSQL_URL/run.sh)" echo "$(curl -fsSL $MYSQL_URL/northwind.sql)"
 ```
-
-"$(curl -fsSL https://raw.githubusercontent.com/sealbro/northwind/master/mysql/northwind.sql)"
 
 #### PostgresQL
 
